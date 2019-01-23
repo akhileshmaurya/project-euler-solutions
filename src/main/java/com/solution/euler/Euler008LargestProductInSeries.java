@@ -15,22 +15,37 @@ public class Euler008LargestProductInSeries {
       String num = in.next();
       long res = maximumProductInCoscutive(num, k, n);
       System.out.println(res);
-
     }
+    in.close();
   }
 
-  private static long maximumProductInCoscutive(String num, int k, int size) {
-    long product = 0;
+  public static long maximumProductInCoscutive(String num, int k, int size) {
+    long product = 1;
+    long maxValue = 1;
     if (size >= k) {
       char[] arr = num.toCharArray();
       for (int i = 0; i < k; i++) {
-
+        product = product * Character.getNumericValue(arr[i]);
       }
-      product = Integer.parseInt(String.valueOf(arr[0]));
-      for (int i = 5; i < size; i++) {
+      maxValue = product;
 
+      for (int i = k; i < size; i++) {
+        int lastNumber = Character.getNumericValue(arr[i - k]);
+        if (lastNumber > 0) {
+          product = product * Character.getNumericValue(arr[i]);
+          product = product / lastNumber;
+        } else {
+          product = 1;
+          for (int j = i - k + 1; j <= i; j++) {
+            product = product * Character.getNumericValue(arr[j]);
+          }
+        }
+        if (maxValue < product) {
+          maxValue = product;
+        }
       }
     }
-    return product;
+    System.out.println(maxValue);
+    return maxValue;
   }
 }
