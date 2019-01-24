@@ -5,6 +5,7 @@ import org.junit.Test;
 import com.solution.euler.Euler003LargestPrimeFactor;
 import com.solution.euler.Euler005SmallestMultiple;
 import com.solution.euler.Euler008LargestProductInSeries;
+import com.solution.euler.Euler009SpecialPythgorian;
 
 public class ProjectEulerSolutionTest {
 
@@ -52,4 +53,17 @@ public class ProjectEulerSolutionTest {
     assertEquals("Should Be Paased ", expectedOutput,
         Euler008LargestProductInSeries.maximumProductInCoscutive(num, k, size));
   }
+
+  @Test
+  public void testEuler009LargestPrimeFactor() {
+    int input = 12, expectedOutput = 60;
+    assertEquals("Should Be Paased ", expectedOutput,
+        Euler009SpecialPythgorian.getNumberOfPythagorasTriplet(input));
+    input = 4;
+    expectedOutput = -1;
+    assertEquals("Should Be Paased ", expectedOutput,
+        Euler009SpecialPythgorian.getNumberOfPythagorasTriplet(input));
+
+  }
+
 }
