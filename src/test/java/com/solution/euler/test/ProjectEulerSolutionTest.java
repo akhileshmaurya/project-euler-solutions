@@ -6,6 +6,7 @@ import com.solution.euler.Euler003LargestPrimeFactor;
 import com.solution.euler.Euler005SmallestMultiple;
 import com.solution.euler.Euler008LargestProductInSeries;
 import com.solution.euler.Euler009SpecialPythgorian;
+import com.solution.euler.Euler010SumOfPrimes;
 
 public class ProjectEulerSolutionTest {
 
@@ -55,7 +56,7 @@ public class ProjectEulerSolutionTest {
   }
 
   @Test
-  public void testEuler009LargestPrimeFactor() {
+  public void testEuler009SpecialPythgorian() {
     int input = 12, expectedOutput = 60;
     assertEquals("Should Be Paased ", expectedOutput,
         Euler009SpecialPythgorian.getNumberOfPythagorasTriplet(input));
@@ -63,6 +64,20 @@ public class ProjectEulerSolutionTest {
     expectedOutput = -1;
     assertEquals("Should Be Paased ", expectedOutput,
         Euler009SpecialPythgorian.getNumberOfPythagorasTriplet(input));
+
+  }
+
+  @Test
+  public void testEuler010SumOfPrimes() {
+    long sum[] = Euler010SumOfPrimes.getPrimeArry();
+
+    int input = 5, expectedOutput = 10;
+    assertEquals("Should Be Paased ", expectedOutput,
+        Euler010SumOfPrimes.getSumOfPrimes(sum, input));
+    input = 10;
+    expectedOutput = 17;
+    assertEquals("Should Be Paased ", expectedOutput,
+        Euler010SumOfPrimes.getSumOfPrimes(sum, input));
 
   }
 
