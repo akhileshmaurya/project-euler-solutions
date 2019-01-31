@@ -22,8 +22,30 @@ public class Euler017NumberToWord {
 
 
   private static void init() {
-
     numberMap.put(1, "One");
+    numberMap.put(1, "Two");
+    numberMap.put(1, "Three");
+    numberMap.put(1, "Four");
+    numberMap.put(1, "Five");
+    numberMap.put(1, "Six");
+    numberMap.put(1, "Seven");
+    numberMap.put(1, "Eight");
+    numberMap.put(1, "Nine");
+    numberMap.put(1, "Ten");
+    numberMap.put(1, "Eleven");
+    numberMap.put(1, "Twelwe");
+    numberMap.put(1, "Thirteen");
+    numberMap.put(1, "Fourteen");
+    numberMap.put(1, "Fifteen");
+    numberMap.put(1, "Sixteen");
+    numberMap.put(1, "Seventeen");
+    numberMap.put(1, "Eighteen");
+    numberMap.put(1, "Ninteen");
+    numberMap.put(1, "Twenty");
+    numberMap.put(1, "Thirty");
+    numberMap.put(1, "Fourty");
+    numberMap.put(1, "Fifty");
+
   }
 
 
